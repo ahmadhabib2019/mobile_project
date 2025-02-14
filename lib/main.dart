@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Supabase.initialize(
+    url: 'hhttps://vqmxculxawfltawseqzg.supabase.co', // Ganti dengan URL proyek Anda
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZxbXhjdWx4YXdmbHRhd3NlcXpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk0MDg4MzIsImV4cCI6MjA1NDk4NDgzMn0.rrkx4C2tCVYet5ncUP-b9HQLndXwJ9-RH33ACv_4MCQ', // Ganti dengan Anon Key proyek Anda
+  );
   runApp(const MyApp());
 }
 
